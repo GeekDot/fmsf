@@ -7,17 +7,27 @@ import unittest
 from app import create_app, db
 from app.urls import blueprint
 
+from flask_cors import CORS
 from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
 
 
+# 获取环境变量
 env = os.getenv('RUNTIME_ENV') or 'dev'
+# 创建 app
 app = create_app(env)
+# 加载蓝图
 app.register_blueprint(blueprint)
 
+# 创建 manager
 manager = Manager(app)
+# 创建 migrate
 migrate = Migrate(app, db)
+# 新增 db 到 manager 中
 manager.add_command('db', MigrateCommand)
+
+# 跨域请求
+CORS(app, supports_credentials=True)
 
 
 @manager.command
