@@ -9,5 +9,11 @@ api_config = {
 
 
 class Config(object):
+
     SECRET_KEY = 'Hash128'
+
+    DEBUG = True
+
+    LOG_LEVEL = 'INFO'
+
     SQLALCHEMY_TRACK_MODIFICATIONS = False
