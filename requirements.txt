@@ -1,0 +1,6 @@
+flask
+flask_cors
+flask_script
+flask_migrate
+flask_restplus
+flask_sqlalchemy
