@@ -38,8 +38,6 @@ def get_user(data):
     if phone is not None:
 
         db_data = Users.query.filter(Users.phone == phone).first()
-        json = Users.query.filter(Users.data[0]['rows'] == 3).first()
-        print(json.data)
 
         if db_data is not None:
 
