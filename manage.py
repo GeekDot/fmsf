@@ -5,7 +5,7 @@ import os
 import unittest
 
 from app import create_app, db
-from app.urls import blueprint
+from app.route import blueprint
 
 from flask_cors import CORS
 from flask_script import Manager

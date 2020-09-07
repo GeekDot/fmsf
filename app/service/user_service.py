@@ -17,7 +17,7 @@ def add_user(data):
         db_data = {
             'phone': phone,
             'username': username,
-            'mail': mail,
+            'mail': mail
         }
 
         db_data = Users(**db_data)

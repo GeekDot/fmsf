@@ -10,10 +10,5 @@ api_config = {
 
 class Config(object):
 
-    SECRET_KEY = 'Hash128'
-
-    DEBUG = True
-
-    LOG_LEVEL = 'INFO'
-
+    SECRET_KEY = '5e8bca1c9aaa34aed6d069be3dfccd31'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
